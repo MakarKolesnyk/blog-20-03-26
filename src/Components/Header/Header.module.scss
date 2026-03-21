@@ -1,0 +1,46 @@
+@use "/src/common/styles/breakPoint" as *;
+@use '/src/common/styles/template' as *;
+
+.header {
+   @extend %limit-width;
+}
+
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3rem;
+  padding: 0 0.5rem;
+  background-color: aqua;
+  p {
+    margin: 0;
+    span {
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  @media screen and (max-width: $s) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo-text {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 16px;
+  }
+  .logo {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    top: 5px;
+  }
+}

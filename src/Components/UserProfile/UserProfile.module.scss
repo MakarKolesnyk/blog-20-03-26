@@ -1,0 +1,12 @@
+@use '/src/common/styles/template' as *;
+
+.wrapper{
+    @extend %limit-width;
+    h1{
+        text-align: center;
+    }
+}
+
+.user-info{
+    display: flex;
+}

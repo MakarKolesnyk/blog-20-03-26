@@ -1,0 +1,10 @@
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%limit-width{
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
