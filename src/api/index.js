@@ -1,4 +1,5 @@
 import axios from "axios";
+import queryString from 'query-string';
 
 const httpClient = axios.create({
   baseURL: "https://dummyjson.com",
@@ -6,9 +7,13 @@ const httpClient = axios.create({
 
 export const loginUser = (dataUser) => httpClient.post("/auth/login", dataUser);
 
-export const getAllUsers = () => httpClient.get('/users')
+export const getAllUsers = (options) => {
+  const query = queryString.stringify(options)
+  return httpClient.get(`/users?${query}`)}
 
 export const getOneUser = (id) => httpClient.get(`/users/${id}`)
+
+
 
 // "username": "emilys",
 // "password": "emilyspass",
