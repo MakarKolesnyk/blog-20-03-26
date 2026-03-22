@@ -3,7 +3,13 @@
   flex-direction: column;
 }
 
-%limit-width{
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%limit-width {
   width: 100%;
   max-width: 1600px;
   margin: auto;

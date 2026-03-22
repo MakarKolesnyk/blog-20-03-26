@@ -1,8 +1,13 @@
+@use '/src/common/styles/colors' as *;
+
 .menu {
   li {
     display: inline-block;
     a {
       padding: 0.5em;
+    }
+    .active{
+      background-color: $yellow;
     }
   }
 }

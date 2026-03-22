@@ -20,19 +20,25 @@ const UserProfile = () => {
   if (isPending) {
     return <p>Loading</p>;
   }
-  if(!selectedUser){return <p>not user profile availebl</p>}
+  if (!selectedUser) {
+    return <p>not user profile availebl</p>;
+  }
 
   return (
-    <div className={styles.wrapper}>
-      <section className={styles["user-info"]}>
-        <img src={selectedUser.image} alt={selectedUser.firstName} />
-        <div>
-          <h2>
-            {selectedUser.firstName} {selectedUser.lastName}
-          </h2>
-          <p>{selectedUser.email}</p>
-        </div>
-      </section>
+    <div className={styles.bg}>
+      <div className={styles.wrapper}>
+        <section className={styles["user-info"]}>
+          <img src={selectedUser.image} alt={selectedUser.firstName} />
+          <div>
+            <h2>
+              {selectedUser.firstName} {selectedUser.lastName}
+            </h2>
+            <p>{selectedUser.email}</p>
+            <p>{selectedUser.company.title}</p>
+          </div>
+        </section>
+        <div className={styles['bottom-line']}></div>
+      </div>
     </div>
   );
 };
