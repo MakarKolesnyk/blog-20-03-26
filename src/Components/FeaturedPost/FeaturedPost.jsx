@@ -22,11 +22,11 @@ const FeaturedPost = (props) => {
           <img src={"/images/1600x1200.png"} />
         </div>
       )}
-      <article>
+      <article className={styles["featured-blog"]}>
         <div>
           {imgPosition === "over" && <img src={"/images/600x400.png"} />}
           <h2>{featuredPost.title}</h2>
-          <p>{featuredPost.body.slice(0, 100)}...</p>
+          <p>{featuredPost.body.slice(0, 150)}...</p>
           <button>
             <Link to={`/posts/${featuredPost.id}`}>Read More</Link>
           </button>

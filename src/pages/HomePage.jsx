@@ -9,19 +9,23 @@ const HomePage = () => {
   return (
     <>
       <section className={styles.realetive}>
-        <FeaturedPost imgPosition='under'/>
+        <FeaturedPost imgPosition="under" />
       </section>
       <div className={styles.wrapper}>
-        <section>
-          <div>
+        <section className={styles["all-posts"]}>
+          <div >
             <h2>Featured Post</h2>
-            <FeaturedPost imgPosition='over'/>
+            <div className={styles['featured-post']}>
+            <FeaturedPost imgPosition="over" />
+            </div>
           </div>
-          <div className={styles.inlineBlock}>
-            <h2>All posts</h2>
-            <Link to="/posts">view all</Link>
+          <div>
+            <div className={styles.inlineBlock}>
+              <h2>All posts</h2>
+              <Link to="/posts">view all</Link>
+            </div>
+            <PostsList limit={CONSTANTS.LIMITS_POSTS.at(1)} />
           </div>
-          <PostsList limit={CONSTANTS.LIMITS_POSTS.at(1)} />
         </section>
         <section>
           <h2>List of authors</h2>

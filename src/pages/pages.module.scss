@@ -27,3 +27,15 @@
     }
   }
 }
+.all-posts {
+  display: flex;
+  .featured-post {
+    width: 85%;
+    border: 1px $lightgrey solid;
+    padding: 31px;
+    img{
+       width: 669px;
+    height: 350px;
+    }
+  }
+}

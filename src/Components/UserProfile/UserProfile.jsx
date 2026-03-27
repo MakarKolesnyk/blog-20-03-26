@@ -21,7 +21,7 @@ const UserProfile = () => {
     return <p>Loading</p>;
   }
   if (!selectedUser) {
-    return <p>not user profile availebl</p>;
+    return <p>not user profile available</p>;
   }
 
   return (
@@ -37,7 +37,7 @@ const UserProfile = () => {
             <p>{selectedUser.company.title}</p>
           </div>
         </section>
-        <div className={styles['bottom-line']}></div>
+        <div className={styles["bottom-line"]}></div>
       </div>
     </div>
   );

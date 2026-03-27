@@ -21,5 +21,7 @@ export const getAllPosts = (options) => {
 
 export const getOnePost = (id) => httpClient.get(`/posts/${id}`);
 
+export const getAllCommentsByPost = (id) => httpClient.get(`/comments/post/${id}`)
+
 // "username": "emilys",
 // "password": "emilyspass",

@@ -1,19 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PostDetails from '../Components/PostDetails/PostDetails';
 
 
 const PostPage = () => {
     return (
         <div>
-            PostPage
+            <PostDetails/>
         </div>
     );
 };
 
 
-PostPage.propTypes = {
-
-};
 
 
 export default PostPage;
