@@ -21,7 +21,23 @@ export const getAllPosts = (options) => {
 
 export const getOnePost = (id) => httpClient.get(`/posts/${id}`);
 
-export const getAllCommentsByPost = (id) => httpClient.get(`/comments/post/${id}`)
+export const getAllCommentsByPost = (id) =>
+  httpClient.get(`/comments/post/${id}`);
+
+export const getAllUserPost = (id) => httpClient.get(`/posts/user/${id}`);
+
+export const getAllTags = () => httpClient.get("/posts/tag-list");
+
+export const getAllPostByTag = (options) => {
+  const { tagName, ...restParams } = options;
+  const query = queryString.stringify(restParams);
+  return httpClient.get(`/posts/tag/${tagName}?${query}`);
+};
+
+export const getSearchPost = (options) => {
+  const query = queryString.stringify(options);
+  return httpClient.get(`posts/search?${query}`);
+};
 
 // "username": "emilys",
 // "password": "emilyspass",

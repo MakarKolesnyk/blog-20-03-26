@@ -1,5 +1,5 @@
 @use "/src/common/styles/colors" as *;
-@use '/src/common/styles/breakPoint' as *;
+@use "/src/common/styles/breakPoint" as *;
 
 .post-card {
   width: 100%;
@@ -12,12 +12,24 @@
   }
   &:hover {
     background-color: $lightYellow;
+    color: $bg-dark;
+  }
+  img {
+    max-height: 200px;
+    margin-right: 15px;
+  }
+  .tag-link:not(:first-child)::after {
+    padding: 0 0.5rem;
+  }
+  .tag-link:not(:last-child)::after {
+    content: " | ";
+    padding: 0 0.5rem;
   }
   a {
     color: $purple;
     font-weight: 500;
   }
-  @media all and (min-width: $m){
+  @media all and (min-width: $m) {
     flex-direction: row;
   }
 }

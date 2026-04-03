@@ -51,10 +51,10 @@ const PostDetails = () => {
     return <p>not post available</p>;
   }
   return (
-    <article>
+    <article className={styles.post}>
       <div className={styles.flex}>
-        <div>
-          <img src={authorImg} alt="authorImg" />
+        <div className={styles.flex}>
+          <img className={styles.img} src={authorImg} alt="authorImg" />
           <div>
             {author}
             <p>Views: {selectedPost.views}</p>
@@ -73,7 +73,7 @@ const PostDetails = () => {
       </div>
       <h1>{selectedPost.title}</h1>
       <picture>
-        <img src="/images/1600x1200.png"/>
+        <img className={styles['post-img']} src="/images/1600x1200.png"/>
       </picture>
       <p>{selectedPost.body}</p>
       <h3>comments:</h3>

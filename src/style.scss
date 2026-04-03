@@ -1,0 +1,16 @@
+@use '/src/common/styles/mixins' as *;
+@use '/src/common/styles/colors' as *;
+
+
+body {
+  &.light {
+    @include theme($bg-light, $text-light);
+  }
+  &.dark {
+    @include theme($bg-dark, $text-dark);
+  }
+
+  transition:
+    background-color 0.3s,
+    color 3s;
+}

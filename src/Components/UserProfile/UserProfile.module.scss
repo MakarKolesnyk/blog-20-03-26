@@ -1,24 +1,28 @@
-@use '/src/common/styles/template' as *;
+@use "/src/common/styles/template" as *;
 @use "/src/common/styles/colors" as *;
 
-.bg{
-    margin-top: 30px;
-    background-color: $lavander;
+.bg {
+  margin-top: 30px;
+  background-color: $lavander;
 }
 
-.wrapper{
-    @extend %limit-width;
-    h1{
-        text-align: center;
-    }
+.wrapper {
+  @extend %limit-width;
+  h1 {
+    text-align: center;
+  }
 }
 
-.user-info{
-    display: flex;
-    padding: 70px 0;
+.user-info {
+  display: flex;
+  padding: 70px 0;
+  color: $text-light;
+  img{
+    object-fit: cover;
+  }
 }
 
-.bottom-line{
-    height: 10px;
-    background-image: linear-gradient(to right, $yellow 70%, $purple 70%)
+.bottom-line {
+  height: 10px;
+  background-image: linear-gradient(to right, $yellow 70%, $purple 70%);
 }

@@ -1,5 +1,6 @@
 @use "/src/common/styles/template" as *;
 @use "/src/common/styles/colors" as *;
+@use '/src/common/styles/breakPoint' as *;
 
 .realetive {
   position: relative;
@@ -25,6 +26,19 @@
       color: $purple;
       font-weight: 500;
     }
+  }
+}
+.conteiner{
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $m) {
+    flex-direction: row;
+  }
+  section:last-child{
+    margin-left: 20px;
+     @media screen and (min-width: $m) {
+    max-width: 25%;
+  }
   }
 }
 .all-posts {

@@ -11,6 +11,19 @@ const PostCard = (props) => {
   const navigateToPostPage = () => {
     navigate(`/posts/${post.id}`);
   };
+  const stopPropagation = (event) => {
+    event.stopPropagation();
+  };
+  const showPostLink = (tag) => (
+    <Link
+      className={styles["tag-link"]}
+      key={tag}
+      to={`/posts/tag/${tag}`}
+      onClick={stopPropagation}
+    >
+      {tag}
+    </Link>
+  );
   useEffect(() => {
     const loadUser = async () => {
       try {
@@ -23,9 +36,6 @@ const PostCard = (props) => {
     };
     loadUser();
   }, [post.userId]);
-  const stopPropagation = (event) => {
-    event.stopPropagation();
-  };
   return (
     <article onClick={navigateToPostPage} className={styles["post-card"]}>
       {withPic && (
@@ -36,7 +46,7 @@ const PostCard = (props) => {
       )}
       <div>
         {withPic ? (
-          <p>{post.tags.join(" | ")}</p>
+          <p>{post.tags.map(showPostLink)}</p>
         ) : (
           <p>
             By{" "}
